@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project</title>
+<link href="../css/initstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../js/initstyle.js"></script>
+<style type="text/css">
+.limitWidth{ width:500px; margin:0 auto;}
+.tempWrap{border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="limitWidth">
+	<ul class="demoList">
+		<li><h1>Label</h1></li>
+		<li>说明：把带有labelTitle和labelCon的两组ul初始化为标签切换功能的容器；</li>
+		<li>noInt:不对labelTitle进行宽度初始化。</li>
+		<li>overAction:默认标签切换动作是由click触发，添加此api后改为mouseover触发，此api添加到labelTitle的class上即可。</li>
+		<li>labelCute:模仿ios风格的标签样式；</li>
+		<li>labelCuteXL:同上，更大的尺寸；</li>
+	</ul>
+	<b>展示效果一</b>
+	<div class="tempWrap">
+		<ul class="labelTitle radioBtn labelSimple">
+			<li>标签一</li>
+			<li>标签二</li>
+			<li>标签三</li>
+			<li>标签四</li>
+		</ul>
+		<ul class="labelCon">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a>4</a></li>
+		</ul>
+	</div>
+	
+	<br/>
+	<b>展示效果二 -- 结合 tableList & pointerWrap </b>
+	<div class="tempWrap">
+		<ul class="labelTitle radioBtn labelCute labelCuteXL">
+			<li>标签一</li>
+			<li>标签二</li>
+			<li>标签三</li>
+			<li>标签四</li>
+		</ul>
+		<ul class="labelCon">
+			<li>
+				<table class="tableList" data-splitnum="4">
+					<tr><td>淮阴烟厂召开庆“七一”离退休党员座谈会 刘济生 黄春华 </td><td>信息中心</td><td>2011/9/22</td></tr>
+					<tr><td><a href="http://www.baidu.com">淮阴烟厂开展六西格玛改进项目中期“评审” 赵青</a></td><td>财务部</td><td>2011/9/22</td></tr>
+					<tr><td><a href="http://www.baidu.com">南通烟滤嘴公司开展“坚持勤政廉政、服务企业发展”主题征文活动 毛颖熙</a></td><td>生产部</td><td>2011/9/22</td></tr>
+					<tr><td>徐州烟厂物资供应、财务审计党支部举办“创先争优”主题党日活动  崔海滨 张雷 </td><td>信息中心</td><td>2011/9/22</td></tr>
+					<tr><td>淮阴烟厂第五、六、七党支部开展再踏红色之旅活动  </td><td>纪检委</td><td>2011/9/22</td></tr>
+					<tr><td>南京烟厂生产制造处制丝第二党小组开展“争先创优从我做起”主题义务劳动  陈勇 </td><td>生产部</td><td>2011/9/22</td></tr>
+					<tr><td>淮阴烟厂召开庆“七一”离退休党员座谈会 刘济生 黄春华 </td><td>信息中心</td><td>2011/9/22</td></tr>
+					<tr><td><a href="http://www.baidu.com">淮阴烟厂开展六西格玛改进项目中期“评审” 赵青</a></td><td>财务部</td><td>2011/9/22</td></tr>
+					<tr><td><a href="http://www.baidu.com">南通烟滤嘴公司开展“坚持勤政廉政、服务企业发展”主题征文活动 毛颖熙</a></td><td>生产部</td><td>2011/9/22</td></tr>
+					<tr><td>徐州烟厂物资供应、财务审计党支部举办“创先争优”主题党日活动  崔海滨 张雷 </td><td>信息中心</td><td>2011/9/22</td></tr>
+				</table>
+				<div class="pointerWrap"></div>
+			</li>
+			<li></li>
+			<li></li>
+			<li><a>4</a></li>
+		</ul>
+	</div>
+	<br/><br/>
+</div>
+</body>
+</html>
+
+

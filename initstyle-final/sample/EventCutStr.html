@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project</title>
+<script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../js/initstyle.js"></script>
+<style type="text/css">
+.limitWidth{ width:300px; margin:0 auto;}
+td{font-weight:normal; font-size:12px; font-family:Arial;  border:1px solid red;}
+</style>
+</head>
+<body>
+<div class="limitWidth">
+	<ul class="demoList">
+		<li><h1>EventCustStr2</h1></li>
+		<li>说明：字段截取方法，被全局调用，修正版。</li>
+	</ul>
+	<table class="" width="100%">
+		<tr><td>2222222222222222222222222222222淮阴烟厂召开庆“七一”离退休党员座谈会 刘济生 黄春华 </td><td>信息中心</td><td>2011/9/22</td></tr>
+		<tr><td><a href="http://www.baidu.com">淮阴烟厂开展六西格玛改进项目中期“评审” 赵青2222222222222222222222222222</a></td><td>财务部</td><td>2011/9/22</td></tr>
+		<tr><td><a href="http://www.baidu.com">南通烟滤嘴公司开展“坚持勤政廉政、服务企业发展”主题征文活动 毛颖熙</a></td><td>生产部</td><td>2011/9/22</td></tr>
+		<tr><td>徐州烟厂物资供应、财务审计党支部举办“创先争优”主题党日活动  崔海滨 张雷 </td><td>信息中心</td><td>2011/9/22</td></tr>
+		<tr><td>淮阴烟厂第五、六、七党支部开展再踏红色之旅活动  </td><td>纪检委</td><td>2011/9/22</td></tr>
+		<tr><td>南京烟厂生产制造处制丝第二党小组开展“争先创优从我做起”主题义务劳动  陈勇 </td><td>生产部</td><td>2011/9/22</td></tr>
+	</table>
+<script type="text/javascript">
+var td=$("table").find("td");
+$(td).each(function(i,td2){
+	if(i==0){
+		//alert($(td).css("font-size"));
+	}
+	EventCutStr2(td2,$(td2),"","");
+});
+alert(navigator.appVersion);
+function EventCutStr2(obj,num,title,api){
+    var x2="off";
+    var fixNum=0;
+    if(api!=null&&api!=""){
+        var sApi=api.split(" ");
+        $.map(sApi,function(n){
+            //if(n.indexOf)
+            //alert(n.replace(/\d\s*/img,""));
+            if(n=="x2"){x2="on"}else
+            if(n.replace(/\d\s*/img,"")=="-"){fixNum=-n.replace(/\-\s*/img,"")}else
+            if(n.replace(/\d\s*/img,"")=="+"){fixNum=n.replace(/\+\s*/img,"")}
+        })
+    }
+    
+    var str=$(obj).text();
+    if(title==null||title==""){title=obj}
+    $(title).attr("title",str);
+    var fixBold=function(){if($(obj).css("font-weight")=="bold"||$(obj).css("font-weight")>400){return 4}else{return 2}}
+    if(num==null||num==""){num=$(obj).width()/(parseInt($(obj).css("font-size"))+fixBold());}
+    else{if($.type(num)=="object"){num=$(num).width()/(parseInt($(num).css("font-size"))+fixBold());}}
+    var re=str.replace(/[^\x00-\xff]|\s*/img,"");
+    var cnum=num+parseInt((re.length)/2);
+    if(cnum>num*2){cnum=num*2-1}
+    if(x2=="on"){num=2*num;cnum=2*cnum;}
+    var done=str.substring(0,cnum);
+    //alert(done)
+    var numjudge=function(){
+        if(done.replace(/[^\x00-\xff]|\s*/img,"").length/done.length<0.4){return num;}
+        else{return cnum;}
+    }
+    if(str.length>cnum&&str.length>num){
+        $(obj).text(str.substring(0,numjudge()+parseInt(fixNum))+"...");
+    }
+}
+</script>
+</div>
+</body>
+</html>
+
+

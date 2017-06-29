@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project</title>
+<link href="css/initstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/initstyle.js"></script>
+<style type="text/css">
+.limitWidth{ width:500px; margin:0 auto;}
+</style>
+</head>
+<body>
+<div class="limitWidth">
+	<ul class="demoList">
+		<li><h1>initStyle/样式初始化 v1.02</h1></li>
+		<li><h1>www.initst.com</h1></li>
+		<li>说明：intCore更改为initStyle，用最简单的容器组来初始化各种各样带复杂交互效果的功能块。</li>
+		<li><b>作为initStyle的第一个版本，很多地方还不完善，在项目上谨慎使用!</b></li>
+		<li>目前initStyle有如下方法，点击查看详情</li>
+		<li><a href="sample/Loading.html" target="_blank">Loading</a>:在所有的界面添加loading效果;</li>
+		<li><a href="sample/BrowserVer.html" target="_blank">BrowserVer</a>:解决浏览器兼容问题;</li>
+		<li><a href="sample/Object2.html" target="_blank">Object2</a>:初始化所有按钮和input的交互效果;</li>
+		<li><a href="sample/ImgSlider.html" target="_blank">ImgSlider</a>:图片滑动切换样式;</li>
+		<li><a href="sample/ImgSwitch.html" target="_blank">ImgSwitch</a>:普通图片切换;<b class="red">v1.02添加数字联动、添加标题和正文字段显示、字段智能截取、添加切换时间间隔API；</b></li>
+		<li><a href="sample/Label.html" target="_blank">Label</a>:滑动标签页切换;</li>
+		<li><a href="sample/Pointer.html" target="_blank">Pointer</a>:滑动分页效果;</li>
+		<li><a href="sample/Select.html" target="_blank">Select</a>:自定义select样式(暂不推荐使用);</li>
+		<li><a href="sample/SideNav.html" target="_blank">SideNav</a>:无限级侧边导航效果;<b class="red">v1.01更新无限级(此前只支持两级)；v1.001-3更新“oneActive”API</b></li>
+		<li><a href="sample/StyleSwitch.html" target="_blank">StyleSwitch</a>:带cookie的样式切换;</li>
+		<li><a href="sample/TableForm.html" target="_blank">TableForm</a>:表单初始化;</li>
+		<li><a href="sample/TableList.html" target="_blank">TableList</a>:数据列表初始化;</li>
+	</ul>
+	<ul class="demoList">
+		<li><h1>后续规划</h1></li>
+		<li>AniSwitch:带cookie记忆的全局动画效果开关;</li>
+		<li>Iframe:页面中所有iframe宽度高度自适应;</li>
+		<li>IPWindow:弹出窗口;</li>
+		<li>IPopMenu:弹出菜单;</li>
+		<li>Tree:无限级树菜单;</li>
+		<li>......</li>
+	</ul>
+	
+
+	<input id="find"  onkeydown="bb(event)"  value="test"/>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	//$("li").append("<br/><br/>");
+	
+function btn()
+{
+    switch(a)
+    {
+    case 'google':location.href='http://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp#hl=zh-CN&newwindow=1&safe=strict&site=webhp&q='+encodeURI(document.forms('find').value);return;
+    case 'micrsoft':location.href='http://www.youdao.com/search?q='+encodeURI(document.getElementById('find').value);return;
+    case 'baidu':location.href='http://www.baidu.com/s?wd='+encodeURI(document.getElementById('find').value);return;
+    case 'sougou':location.href='http://www.sogou.com/web?query='+encodeURI(document.getElementById('find').value);return;
+    default:location.href='http://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp#hl=zh-CN&newwindow=1&safe=strict&site=webhp&q='+encodeURI(document.getElementById('find').value);return;
+    }
+
+}
+
+
+
+
+var a;
+function get(obj)
+{
+    switch(obj)
+    {
+    case '1':a='google';return;
+    case '2':a='micrsoft';return;
+    case '3':a='baidu';return;
+    case '4':a='sougou';return;
+    default:a='google';return;
+    }
+}
+
+
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+
+</script>
