@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3_MARQUEE</title>
+
+    <style>
+        .marquee {
+            width: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            animation: marquee 50s linear infinite;
+        }
+
+        .marquee:hover {
+            animation-play-state: paused
+        }
+
+        /* Make it move */
+        @keyframes marquee {
+            0%   { text-indent: 27.5em }
+            100% { text-indent: -105em }
+        }
+
+        /* Make it pretty */
+        .microsoft {
+            padding-left: 1.5em;
+            position: relative;
+            font: 16px 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+        }
+
+       
+
+        
+    </style>
+</head>
+<body>
+    <p class="microsoft marquee">Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the <a href="http://windows.microsoft.com/en-US/windows-8/start-screen">Start screen</a>, <a href="http://windows.microsoft.com/en-US/windows-8/charms">charms</a>, and a <a href="http://windows.microsoft.com/en-US/windows-8/microsoft-account">Microsoft account</a>, you can spend less time searching and more time doing.</p>
+</body>
+</html>
