@@ -23,7 +23,7 @@
 	<div class="ui-top wow fadeInDown"  data-wow-delay="0.1s" data-wow-duration="1s">
         <div class="ui-annc wow fadeInDown" data-wow-delay="0.3s" data-wow-duration="1s">
             <div class="ui-limit">
-            		<div class="desc"><i class="fal fa-volume-up"></i> news headlines：</div>
+            		<div class="desc"><i class="fal fa-volume-up"></i> <span class="desci">news headlines：</span></div>
             		<div class="marquee">
             			<a href="#">2018.6 ホームページをリニューアルいたしました</a><!--包含标点符号在内，限定40个字！超出后自动滚动体验不佳！-->
             		</div>
@@ -39,18 +39,6 @@
                 </div>
                 <div class="btn-nav"><i class="fa fa-bars"></i></div>
                 <div class="ui-nav-wrapper">
-	                	<div class="dropdown">
-					  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    <span class="lang-img lang-jap"></span>日本語
-					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					    <a class="dropdown-item" href="#"><span class="lang-img lang-chs"></span>简中</a>
-					    <a class="dropdown-item" href="#"><span class="lang-img lang-chs"></span>繁中</a>
-					    <a class="dropdown-item" href="#"><span class="lang-img lang-eng"></span>English</a>
-					    <a class="dropdown-item" href="#"><span class="lang-img lang-jap"></span>日本語</a>
-					    <a class="dropdown-item" href="#"><span class="lang-img lang-kor"></span>한국어</a>
-					  </div>
-					</div>
 	                <ul class="ui-nav">
 	                    <li class="active"><a href="#block-01">ホーム</a></li>
 	                    <li><a href="#block-02">RBBについて</a></li>
@@ -466,41 +454,13 @@ $('#youtube-video').on('hidden.bs.modal', function (e) {
 function open_youtube(url,obj){
 	$('#youtube-video').modal('show');
 	$('#youtube-video').find(".modal-title").text($(obj).find(".title").text());
-	$('#youtube-video').find(".modal-body").append("<iframe width='768' height='430' frameborder='0' autoplay='1' allow='autoplay; encrypted-media' allowfullscreen src="+url+"></iframe>");
-}
-function onPlayerReady(event) {
-    event.target.playVideo();
-}
-/*
-function video_play(){
-	//$('#myModal').modal('show');
-	//$("#video")[0].play();
+	$('#youtube-video').find(".modal-body").append("<iframe frameborder='0' autoplay='1' allow='autoplay; encrypted-media' allowfullscreen src="+url+"></iframe>");
 }
 
-$(window).resize(function(){
-   $.timer.set("block01",function(){
-       if($("html").hasClass("desktop")&&$("html").hasClass("run1st")==false){
-       	   if($("html").hasClass("mobile")){$("html").addClass("run1st")}
-		   $(".block-01").height($(window).height());
-	       $(".pg-canvas").attr("height",$(window).height())
-	   }
-   },300);
-});
-
-$(".ui-nav").find("a").on("click",function(){
-	var str = this.href;  
-	str = str.match(/#.*?$/).toString(); 
-	$('html,body').animate({scrollTop: $(str).offset().top-100}, 1000);
-	if($("html").hasClass("mobile")){
-		$(".ui-top").removeClass("ui-top-shownav");
-	}
-	return false;
-})
 $(".btn-nav").on("click",function(){
 	$(".ui-top").addClass("ui-top-shownav");
 });
 $(".ui-nav .close-nav").on("click",function(){
 	$(".ui-top").removeClass("ui-top-shownav");
 });
-*/
 </script>

@@ -16,8 +16,6 @@ embed{display:none;}
 .lang-img{background-image: url(../images/country.png);}
 :focus {outline:none;}
 
-
-
 /*
 code by ayin86@163.com 
 css&js分别有1323种颜色
@@ -12030,7 +12028,6 @@ img {
 }
 .block-01 {
   position: relative;
-  min-height: 500px;
 }
 .block-01 .content-wrapper .carousel .carousel-indicators li {
   background-color: rgba(0, 0, 0, 0.3);
@@ -12378,6 +12375,10 @@ img {
 .block-mail .mail-wrapper .submit:hover {
   color: #fff;
 }
+#youtube-video iframe {
+  width: 768px;
+  height: 430px;
+}
 .ui-footer {
   padding: 20px;
   background-color: rgba(242, 242, 242, 0.5);
@@ -12432,3 +12433,282 @@ img {
 /*
 
 */
+@media (max-width: 415px) {
+  .ui-sidebtn {
+    display: none;
+  }
+  .ui-limit {
+    width: 100%;
+  }
+  @keyframes marquee {
+    0% {
+      text-indent: 40rem;
+    }
+    100% {
+      text-indent: -40rem;
+    }
+  }
+  .ui-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .ui-top .ui-annc {
+    padding: 0 10px;
+  }
+  .ui-top .ui-annc .desc .desci {
+    display: none;
+  }
+  .ui-top .ui-annc .desc .fal {
+    margin-right: 20px;
+  }
+  .ui-top .ui-annc .fa-times {
+    display: none;
+  }
+  .ui-top .marquee {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: marquee 10s linear infinite;
+  }
+  .ui-top .marquee:hover {
+    animation-play-state: paused;
+  }
+  .ui-top .ui-header {
+    height: 80px;
+    padding-top: 10px;
+    transition: all 0.5s cubic-bezier(0.78, 0.02, 0.2, 1), z-index 0s 0.12s;
+  }
+  .ui-top .ui-header .ui-logo {
+    position: absolute;
+    left: 20px;
+  }
+  .ui-top .ui-header .ui-logo .img-logo {
+    height: 50px;
+    margin-top: 5px;
+  }
+  .ui-top .ui-header .btn-nav {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    width: 40px;
+    z-index: 10;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 7px;
+    display: block;
+  }
+  .ui-top .ui-header .btn-nav .fa {
+    font-size: 2rem;
+    color: #000;
+  }
+  .ui-top .ui-header .btn-nav:hover {
+    background-color: #f2f2f2;
+  }
+  .ui-top .ui-header .btn-nav:hover .fa {
+    color: #264c73;
+  }
+  .ui-top .ui-header .dropdown {
+    top: 35px;
+    right: auto;
+    left: 10px;
+  }
+  .ui-top .ui-header .ui-nav {
+    z-index: -1;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    top: -100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.78, 0.02, 0.2, 1), z-index 0s 0.12s;
+    overflow: auto;
+  }
+  .ui-top .ui-header .ui-nav li {
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .ui-top .ui-header .ui-nav li a {
+    color: #fff;
+    transition: all 0.5s cubic-bezier(0.78, 0.02, 0.2, 1), z-index 0s 0.12s;
+  }
+  .ui-top .ui-header .ui-nav li a:hover {
+    color: #fff;
+  }
+  .ui-top .ui-header .ui-nav li.close-nav {
+    display: block!important;
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    line-height: 0;
+    font-size: 2rem!important;
+    color: #000;
+  }
+  .ui-top.ui-top-scrolled .ui-header {
+    padding-top: 0;
+    background-color: rgba(13, 19, 38, 0.95);
+  }
+  .ui-top.ui-top-shownav .ui-header .ui-nav {
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    z-index: 12;
+    background-color: #fff;
+    margin: 0;
+    padding-top: 30px;
+  }
+  .ui-content .panel .panel-heading .title {
+    font-size: 2.5rem;
+  }
+  .ui-content .panel .panel-heading .title .eng {
+    line-height: 1rem;
+    font-size: 1.5rem;
+  }
+  .block-02 .panel .panel-body {
+    padding: 20px 20px;
+  }
+  .block-02 .panel .panel-body .about-list {
+    font-size: 0;
+  }
+  .block-02 .panel .panel-body .about-list:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  .block-02 .panel .panel-body .about-list li {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .block-03 .news-list {
+    margin: 0;
+  }
+  .block-03 .news-list li {
+    width: 100%;
+  }
+  .block-05 .ui-limit {
+    padding-bottom: 0;
+  }
+  .block-05 .panel .panel-body {
+    padding: 40px 0 0 30px;
+    position: relative;
+  }
+  .block-05 .panel .panel-body .contact-list {
+    font-size: 0;
+    margin: 0;
+  }
+  .block-05 .panel .panel-body .contact-list:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  .block-05 .panel .panel-body .contact-list li {
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+  }
+  .block-05 .panel .panel-body .qrcode-wrapper {
+    position: static;
+    display: none;
+  }
+  .company-wrapper li {
+    width: 100%;
+  }
+  .block-mail .desc {
+    font-size: 1.2rem;
+    margin: 40px 40px 0 40px;
+  }
+  .block-mail .mail-wrapper {
+    width: 300px;
+  }
+  #youtube-video iframe {
+    width: 100%;
+    height: 230px;
+  }
+  .ui-footer .top {
+    padding-bottom: 10px;
+  }
+  .ui-footer .top .copyright {
+    float: right;
+  }
+  .ui-footer .top .contact-us .item {
+    float: left;
+    padding: 0 0 0 10px;
+  }
+  .ui-footer .top .contact-us .item:hover .desc {
+    display: none;
+  }
+  .ui-footer .bottom {
+    margin-top: 20px;
+  }
+  .ui-footer .bottom .company {
+    text-align: right;
+  }
+  .ui-footer .bottom .company .eng {
+    display: block;
+  }
+}
+@media (max-width: 376px) {
+  .ui-top .marquee {
+    width: 300px;
+  }
+  .block-05 .news-list li .item .img-box img {
+    height: 90px;
+  }
+}
+@media (max-width: 321px) {
+  .ui-top .marquee {
+    width: 260px;
+  }
+  .ui-top .ui-header .ui-logo .img-logo {
+    height: 46px;
+  }
+  .block-05 .ui-limit {
+    padding-bottom: 0;
+  }
+  .block-05 .panel .panel-body {
+    padding: 40px 0 0 30px;
+    position: relative;
+  }
+  .block-05 .panel .panel-body .contact-list {
+    font-size: 0;
+    margin: 0;
+  }
+  .block-05 .panel .panel-body .contact-list:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  .block-05 .panel .panel-body .contact-list li {
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+  }
+  .block-05 .panel .panel-body .contact-list li .item {
+    padding: 0 20px 0 80px;
+  }
+  .company-wrapper li .item img {
+    height: 60px;
+  }
+}
